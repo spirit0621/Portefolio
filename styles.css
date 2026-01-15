@@ -1,0 +1,18 @@
+:root{
+  --bg:#0f1720; --card:#0b1220; --text:#e6eef8; --muted:#9fb0c8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.site-header{background:linear-gradient(90deg,#071022, #0b1730);padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.site-header h1{margin:0;font-size:1.6rem}
+.lead{color:var(--muted);margin-top:6px}
+main{padding:24px 0}
+h2{color:var(--text);margin:16px 0}
+#gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);padding:8px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+.card img{width:100%;height:200px;object-fit:cover;display:block;border-radius:6px}
+.card figcaption{color:var(--muted);font-size:0.9rem;padding-top:8px}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+@media (max-width:520px){.card img{height:160px}}

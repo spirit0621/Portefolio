@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Portfolio — P.Test</h1>
+      <p class="lead">Sélection de travaux et captures d'écran</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Présentation courte. Ce portfolio reproduit visuellement les captures d'écran présentes dans le dossier <strong>Photo</strong>.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Galerie</h2>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Pour échanger : <em>ajoutez vos coordonnées ici</em>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Portfolio</div>
+  </footer>
+
+  <script>
+    // Liste des fichiers présents dans /Photo (tels que trouvés dans le dépôt)
+    const photos = [
+      "Capture d’écran 2026-01-14 113034.png",
+      "Capture d’écran 2026-01-14 113058.png",
+      "Capture d’écran 2026-01-14 113121.png",
+      "Capture d’écran 2026-01-14 113158.png",
+      "Capture d’écran 2026-01-14 113217.png",
+      "Capture d’écran 2026-01-14 113231.png",
+      "Capture d’écran 2026-01-14 113254.png",
+      "Capture d’écran 2026-01-14 113313.png",
+      "Capture d’écran 2026-01-14 113327.png",
+      "Capture d’écran 2026-01-14 113346.png",
+      "Capture d’écran 2026-01-14 113406.png",
+      "Capture d’écran 2026-01-14 113418.png"
+    ];
+
+    const grid = document.getElementById('grid');
+
+    photos.forEach(name => {
+      const card = document.createElement('figure');
+      card.className = 'card';
+      const img = document.createElement('img');
+      img.alt = name;
+      // encodeURI pour gérer espaces et caractères spéciaux
+      img.src = encodeURI('Photo/' + name);
+      const caption = document.createElement('figcaption');
+      caption.textContent = name.replace(/^Capture d’écran /, '');
+      card.appendChild(img);
+      card.appendChild(caption);
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
