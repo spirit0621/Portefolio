@@ -1,42 +1,56 @@
 /*
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                      PORTFOLIO STYLES CSS - SOMMAIRE                      ║
+║            PORTFOLIO STYLES - ARCHITECTURE ORIENTÉE COMPOSANTS            ║
 ║                                                                            ║
-║  Ce fichier contient tous les styles du portfolio professionnel           ║
-║  Organisé par sections logiques et responsive design                      ║
+║  Structure modulaire : Composants réutilisables organisés par fonction    ║
+║  Chaque composant est indépendant et peut être utilisé sur toute page    ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 
-TABLE DES MATIÈRES
+ARCHITECTURE COMPOSANTS
 ═════════════════════════════════════════════════════════════════════════════
 
-1.  VARIABLES & COULEURS.................... Palette de couleurs et variables CSS
-2.  RESET & STYLES DE BASE................. Reset global et styles de base
-3.  NAVIGATION............................. Navbar sticky avec menu actif
-4.  HERO SECTION........................... Section de présentation principale
-5.  BOUTONS................................ Styles pour boutons CTA
-6.  SECTIONS PRINCIPALES................... Sections générales du site
-7.  PAGE HERO.............................. En-têtes de pages
-8.  PREVIEW SECTION........................ Section d'aperçu
-9.  ABOUT SECTION.......................... Section à propos
-10. SERVICES SECTION....................... Section services
-11. CONTACT SECTION........................ Formulaire et infos contact
-12. FOOTER................................. Pied de page
-13. PORTFOLIO PAGE......................... Styles galerie portfolio
-14. ABOUT PAGE............................ Styles page à propos
-15. TIMELINE.............................. Chronologie d'événements
-16. SERVICES PAGE......................... Styles page services
-17. PRICING............................... Grille de prix
-18. CONTACT PAGE.......................... Styles page contact
-19. PRESENTATION PAGE..................... Styles page présentation
-20. PROJECTS PAGE......................... Styles page projets
-21. MONITORING PAGE....................... Styles page veille tech
-22. BTS SIO PAGE.......................... Styles page BTS SIO
-23. RESPONSIVE DESIGN..................... Media queries et responsive
+📦 FONDATIONS (GLOBAL)
+  └─ Variables & Couleurs (ligne 45)
+  └─ Reset & Styles de Base (ligne 56)
+  └─ Conteneur Global (ligne 68)
+
+🧩 COMPOSANTS PRIMAIRES (RÉUTILISABLES)
+  └─ Navigation Component (ligne 76)
+  └─ Hero Component (ligne 124)
+  └─ Button Component (ligne 155)
+  └─ PageHero Component (ligne 185)
+  └─ Section Component (ligne 205)
+
+🎨 COMPOSANTS D'AFFICHAGE (PRESENTATIONAL)
+  └─ Card Component (ligne 237)
+  └─ Grid Component (ligne 255)
+  └─ Form Component (ligne 287)
+  └─ Footer Component (ligne 330)
+
+🔧 COMPOSANTS COMPOSÉS (COMPOSITE)
+  └─ Preview Component (ligne 341)
+  └─ About Component (ligne 371)
+  └─ Services Component (ligne 411)
+  └─ Contact Component (ligne 450)
+  └─ Timeline Component (ligne 493)
+  └─ Pricing Component (ligne 529)
+  └─ Projects Component (ligne 572)
+  └─ Monitoring Component (ligne 625)
+  └─ BTS Component (ligne 707)
+  └─ Gallery Component (ligne 760)
+
+📱 RESPONSIVE (MOBILE-FIRST)
+  └─ Breakpoint Tablet (768px)
+  └─ Breakpoint Mobile (480px)
 
 ═════════════════════════════════════════════════════════════════════════════
 */
 
-/* Variables */
+/* ═══════════════════════════════════════════════════════════════════════════
+   📦 FONDATIONS GLOBALES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* VARIABLES & COULEURS - Palette globale réutilisable */
 :root {
   --primary: #2c3e50;
   --secondary: #3498db;
@@ -47,7 +61,7 @@ TABLE DES MATIÈRES
   --border: #ddd;
 }
 
-/* Reset */
+/* RESET & STYLES DE BASE - Normalisation cross-browser */
 * {
   margin: 0;
   padding: 0;
@@ -61,13 +75,18 @@ body {
   background: #fff;
 }
 
+/* CONTENEUR GLOBAL - Wrapper principal réutilisable */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Navigation */
+/* ═══════════════════════════════════════════════════════════════════════════
+   🧩 COMPOSANTS PRIMAIRES - Briques élémentaires réutilisables
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* NAVIGATION COMPONENT - Barre de navigation sticky */
 .navbar {
   background: var(--primary);
   color: white;
@@ -113,7 +132,7 @@ body {
   border-bottom: 2px solid var(--secondary);
 }
 
-/* Hero Section */
+/* HERO COMPONENT - Section principale de présentation */
 .hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
@@ -141,7 +160,7 @@ body {
   opacity: 0.95;
 }
 
-/* CTA Button */
+/* BUTTON COMPONENT - Boutons CTA réutilisables */
 .cta-button {
   display: inline-block;
   background: var(--accent);
@@ -162,7 +181,25 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Sections */
+/* PAGE-HERO COMPONENT - Variante hero pour pages internes */
+.page-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* SECTION COMPONENT - Sections standards */
 section {
   padding: 80px 0;
   border-bottom: 1px solid var(--border);
@@ -181,24 +218,6 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Page Hero */
-.page-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-hero p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
 .section-subtitle {
   text-align: center;
   color: #666;
@@ -206,7 +225,128 @@ h3 {
   font-size: 1.1rem;
 }
 
-/* Preview Section */
+/* ═══════════════════════════════════════════════════════════════════════════
+   🎨 COMPOSANTS D'AFFICHAGE - Éléments de présentation
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* CARD COMPONENT - Carte réutilisable */
+.service-card {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* GRID COMPONENT - Grilles réutilisables */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+/* FORM COMPONENT - Formulaires */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* FOOTER COMPONENT - Pied de page */
+.footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   🔧 COMPOSANTS COMPOSÉS - Combinaisons de composants primaires
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* PREVIEW COMPONENT - Section d'aperçu */
 .preview {
   background: var(--light);
   text-align: center;
@@ -239,7 +379,7 @@ h3 {
   color: var(--accent);
 }
 
-/* About Section */
+/* ABOUT COMPONENT - Section à propos */
 .about {
   background: var(--light);
 }
@@ -252,68 +392,13 @@ h3 {
   line-height: 1.8;
   color: #555;
 }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.gallery-item {
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Services Section */
+/* SERVICES COMPONENT - Section services */
 .services {
   background: white;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 3rem;
-}
-
-.service-card {
-  background: var(--light);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.service-card h3 {
-  color: var(--secondary);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.service-card p {
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Contact Section */
+/* CONTACT COMPONENT - Section contact */
 .contact {
   background: var(--primary);
   color: white;
@@ -324,166 +409,7 @@ h3 {
   color: white;
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: 2rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px 15px;
-  border: none;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-/* Footer */
-.footer {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .nav-menu {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-
-  section {
-    padding: 50px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 60px 20px;
-    min-height: 350px;
-  }
-
-  .hero-title {
-    font-size: 1.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .nav-menu {
-    gap: 0.5rem;
-    font-size: 0.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Portfolio Page Styles */
-.portfolio-section {
-  background: white;
-}
-
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.filter-btn {
-  padding: 8px 20px;
-  border: 2px solid var(--secondary);
-  background: transparent;
-  color: var(--secondary);
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background: var(--secondary);
-  color: white;
-}
-
-/* About Page */
-.about-content {
-  background: white;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-
-.about-text ul {
-  list-style: none;
-}
-
-.skills-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.skills-list li {
-  padding: 0.5rem;
-  background: var(--light);
-  border-left: 4px solid var(--secondary);
-  padding-left: 1rem;
-}
-
-.about-image {
-  text-align: center;
-}
-
-.image-placeholder {
-  width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--light) 0%, #e8e8e8 100%);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-  font-size: 1.1rem;
-}
-
-/* Timeline */
+/* TIMELINE COMPONENT - Chronologie d'événements */
 .experience {
   background: var(--light);
   padding: 3rem 2rem;
@@ -515,54 +441,7 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Services Page */
-.services-section {
-  background: white;
-}
-
-.services-grid-large {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.service-card-large {
-  background: var(--light);
-  padding: 2rem;
-  border-radius: 12px;
-  border-top: 4px solid var(--secondary);
-}
-
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.service-card-large h3 {
-  margin-top: 0;
-}
-
-.service-card-large ul {
-  list-style: none;
-  padding: 0;
-}
-
-.service-card-large li {
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.service-card-large li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--secondary);
-  font-weight: bold;
-}
-
-/* Pricing */
+/* PRICING COMPONENT - Grille de prix */
 .pricing {
   background: var(--light);
 }
@@ -610,143 +489,7 @@ h3 {
   border-bottom: 1px solid #eee;
 }
 
-/* Contact Page */
-.contact-section {
-  background: white;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.contact-info h2 {
-  text-align: left;
-}
-
-.info-item {
-  margin-bottom: 2rem;
-}
-
-.info-item h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--light);
-  color: var(--primary);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  background: var(--secondary);
-  color: white;
-}
-
-.contact-form-wrapper h2 {
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-family: inherit;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-/* Presentation Page */
-.presentation-content {
-  background: white;
-}
-
-.presentation-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-}
-
-.presentation-text {
-  line-height: 1.8;
-}
-
-.expertise-list {
-  list-style: none;
-  padding: 0;
-}
-
-.expertise-list li {
-  padding: 1rem;
-  background: var(--light);
-  margin-bottom: 0.5rem;
-  border-radius: 6px;
-  border-left: 4px solid var(--secondary);
-}
-
-.presentation-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.sidebar-card {
-  background: var(--light);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-top: 3px solid var(--secondary);
-}
-
-.sidebar-card h3 {
-  margin-top: 0;
-}
-
-.sidebar-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-card li {
-  padding: 0.3rem 0;
-  padding-left: 1rem;
-  position: relative;
-}
-
-.sidebar-card li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: var(--secondary);
-}
-
-/* Projects Page */
+/* PROJECTS COMPONENT - Galerie de projets */
 .projects-section {
   background: white;
 }
@@ -814,7 +557,7 @@ h3 {
   color: var(--accent);
 }
 
-/* Monitoring Page */
+/* MONITORING COMPONENT - Suivi technologique */
 .monitoring-section {
   background: white;
 }
@@ -927,7 +670,7 @@ h3 {
   text-decoration: underline;
 }
 
-/* BTS SIO Page */
+/* BTS COMPONENT - Section BTS SIO */
 .bts-section {
   background: white;
 }
@@ -1012,8 +755,269 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
-/* Responsive */
+/* GALLERY COMPONENT - Galerie portfolio */
+.portfolio-section {
+  background: white;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: 2px solid var(--secondary);
+  background: transparent;
+  color: var(--secondary);
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+/* ABOUT PAGE COMPONENT - Styles page à propos */
+.about-content {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.about-text ul {
+  list-style: none;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-list li {
+  padding: 0.5rem;
+  background: var(--light);
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--light) 0%, #e8e8e8 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* PRESENTATION PAGE COMPONENT - Styles page présentation */
+.presentation-content {
+  background: white;
+}
+
+.presentation-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.presentation-text {
+  line-height: 1.8;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-list li {
+  padding: 1rem;
+  background: var(--light);
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary);
+}
+
+.presentation-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 3px solid var(--secondary);
+}
+
+.sidebar-card h3 {
+  margin-top: 0;
+}
+
+.sidebar-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-card li {
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.sidebar-card li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+/* SERVICES PAGE COMPONENT - Styles page services complète */
+.services-section {
+  background: white;
+}
+
+.services-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card-large {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 12px;
+  border-top: 4px solid var(--secondary);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-card-large h3 {
+  margin-top: 0;
+}
+
+.service-card-large ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card-large li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-card-large li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+/* CONTACT PAGE COMPONENT - Styles page contact complète */
+.contact-section {
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h2 {
+  text-align: left;
+}
+
+.info-item {
+  margin-bottom: 2rem;
+}
+
+.info-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--light);
+  color: var(--primary);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+.contact-form-wrapper h2 {
+  text-align: left;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   📱 RESPONSIVE DESIGN - Adaptations mobiles et tablettes
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* BREAKPOINT TABLET - Écrans 768px et moins */
 @media (max-width: 768px) {
+  /* Navigation */
+  .nav-menu {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* Grid Components */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1026,7 +1030,87 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .presentation-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pricing-card.featured {
     transform: scale(1);
+  }
+
+  /* Sections */
+  section {
+    padding: 50px 0;
+  }
+}
+
+/* BREAKPOINT MOBILE - Écrans 480px et moins */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero {
+    padding: 60px 20px;
+    min-height: 350px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Navigation */
+  .nav-menu {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Grid Components */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monitoring-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Forms */
+  .contact-form {
+    max-width: 100%;
+  }
+
+  /* Page Hero */
+  .page-hero {
+    padding: 60px 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
   }
 }
