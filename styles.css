@@ -645,6 +645,335 @@ h3 {
   resize: vertical;
 }
 
+/* Presentation Page */
+.presentation-content {
+  background: white;
+}
+
+.presentation-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.presentation-text {
+  line-height: 1.8;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-list li {
+  padding: 1rem;
+  background: var(--light);
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary);
+}
+
+.presentation-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 3px solid var(--secondary);
+}
+
+.sidebar-card h3 {
+  margin-top: 0;
+}
+
+.sidebar-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-card li {
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.sidebar-card li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+/* Projects Page */
+.projects-section {
+  background: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--light);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-category {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+/* Monitoring Page */
+.monitoring-section {
+  background: white;
+}
+
+.monitoring-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.monitoring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.monitoring-card {
+  background: linear-gradient(135deg, var(--light) 0%, #f8f9fa 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--secondary);
+}
+
+.monitoring-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.monitoring-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.monitoring-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.monitoring-card li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.last-update {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.resources-section {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.resources-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.resource {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.resource h3,
+.resource strong {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.resource ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resource li {
+  padding: 0.3rem 0;
+}
+
+.resource a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resource a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* BTS SIO Page */
+.bts-section {
+  background: white;
+}
+
+.bts-intro {
+  margin-bottom: 3rem;
+}
+
+.intro-card {
+  background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.intro-card h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.intro-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.bts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bts-card {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-top: 4px solid var(--secondary);
+}
+
+.bts-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.bts-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bts-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bts-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .about-grid {
