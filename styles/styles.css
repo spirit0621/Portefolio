@@ -1,3 +1,41 @@
+/*
+╔════════════════════════════════════════════════════════════════════════════╗
+║                      PORTFOLIO STYLES CSS - SOMMAIRE                      ║
+║                                                                            ║
+║  Ce fichier contient tous les styles du portfolio professionnel           ║
+║  Organisé par sections logiques et responsive design                      ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+TABLE DES MATIÈRES
+═════════════════════════════════════════════════════════════════════════════
+
+1.  VARIABLES & COULEURS.................... Palette de couleurs et variables CSS
+2.  RESET & STYLES DE BASE................. Reset global et styles de base
+3.  NAVIGATION............................. Navbar sticky avec menu actif
+4.  HERO SECTION........................... Section de présentation principale
+5.  BOUTONS................................ Styles pour boutons CTA
+6.  SECTIONS PRINCIPALES................... Sections générales du site
+7.  PAGE HERO.............................. En-têtes de pages
+8.  PREVIEW SECTION........................ Section d'aperçu
+9.  ABOUT SECTION.......................... Section à propos
+10. SERVICES SECTION....................... Section services
+11. CONTACT SECTION........................ Formulaire et infos contact
+12. FOOTER................................. Pied de page
+13. PORTFOLIO PAGE......................... Styles galerie portfolio
+14. ABOUT PAGE............................ Styles page à propos
+15. TIMELINE.............................. Chronologie d'événements
+16. SERVICES PAGE......................... Styles page services
+17. PRICING............................... Grille de prix
+18. CONTACT PAGE.......................... Styles page contact
+19. PRESENTATION PAGE..................... Styles page présentation
+20. PROJECTS PAGE......................... Styles page projets
+21. MONITORING PAGE....................... Styles page veille tech
+22. BTS SIO PAGE.......................... Styles page BTS SIO
+23. RESPONSIVE DESIGN..................... Media queries et responsive
+
+═════════════════════════════════════════════════════════════════════════════
+*/
+
 /* Variables */
 :root {
   --primary: #2c3e50;
