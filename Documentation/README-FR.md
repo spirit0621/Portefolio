@@ -1,5 +1,23 @@
 # 🎉 Portfolio - Documentation Complète
 
+## Table des matières
+
+1. [Projet finalisé](#-projet-finalisé)
+2. [Documentation créée](#-documentation-créée)
+3. [Résumé du contenu](#-résumé-du-contenu)
+4. [Parcours d'apprentissage](#-parcours-dapprentissage-recommandé)
+5. [Caractéristiques du projet](#-caractéristiques-du-projet)
+6. [Contenu du dossier Documentation](#-contenu-du-dossier-documentation)
+7. [Technologie utilisée](#-technologie-utilisée)
+8. [Progression du projet](#-progression-du-projet)
+9. [Checklist finalisé](#-checklist-finalisé)
+10. [Pour aller plus loin](#-pour-aller-plus-loin)
+11. [Prochaines étapes](#-prochaines-étapes-possibles)
+12. [Support et contact](#-support-et-contact)
+13. [Versioning](#-versioning)
+
+---
+
 ## ✅ PROJET FINALISÉ
 
 **Date :** 15 janvier 2026  

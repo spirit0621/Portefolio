@@ -1,5 +1,21 @@
 # Architecture détaillée - Portfolio
 
+## Table des matières
+
+1. [Diagramme d'architecture globale](#diagramme-darchitecture-globale)
+2. [Structure de fichiers détaillée](#structure-de-fichiers-détaillée)
+3. [Flux de données](#flux-de-données)
+4. [Composants réutilisables](#composants-réutilisables)
+5. [Variables CSS](#variables-css)
+6. [Responsive breakpoints](#responsive-breakpoints)
+7. [Système d'animation](#système-danimation)
+8. [Patterns JavaScript](#patterns-javascript)
+9. [Performance optimisations](#performance-optimisations)
+10. [Extensibilité](#extensibilité)
+11. [Versioning](#versioning-history)
+
+---
+
 ## Diagramme d'architecture globale
 
 ```

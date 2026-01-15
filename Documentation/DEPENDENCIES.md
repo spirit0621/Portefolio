@@ -1,5 +1,25 @@
 # 📦 Dépendances et Packages
 
+## Table des matières
+
+1. [Résumé exécutif](#résumé-exécutif)
+2. [Stack technologique](#️-stack-technologique)
+3. [Détail des fichiers](#-détail-des-fichiers)
+4. [CSS - Propriétés principales](#️-css-propriétés-principales)
+5. [JavaScript - Fichier unique](#️-javascript-fichier-unique)
+6. [Fichiers asset](#-fichiers-asset)
+7. [Dépendances implicites](#-dépendances-implicites)
+8. [Outils de développement](#️-outils-de-développement)
+9. [Breakdown du code](#-breakdown-du-code)
+10. [Performance](#-performance)
+11. [Sécurité](#-sécurité)
+12. [Scalabilité](#-scalabilité)
+13. [Déploiement](#-déploiement)
+14. [Checklist dépendances](#-checklist-dépendances)
+15. [Recommandations](#-recommandations)
+
+---
+
 ## Résumé exécutif
 
 ```

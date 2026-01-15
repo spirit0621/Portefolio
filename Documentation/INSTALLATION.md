@@ -1,5 +1,21 @@
 # Guide d'installation et déploiement
 
+## Table des matières
+
+1. [Prérequis](#prérequis)
+2. [Installation locale](#installation-locale)
+3. [GitHub Pages deployment](#github-pages-deployment)
+4. [Workflow de développement](#workflow-de-développement)
+5. [Structure correcte pour déploiement](#structure-correcte-pour-déploiement)
+6. [Chemins relatifs](#chemins-relatifs)
+7. [Troubleshooting](#troubleshooting)
+8. [Maintenance procédures](#maintenance-procédures)
+9. [Performance et optimisation](#performance-et-optimisation)
+10. [Bonnes pratiques Git](#bonnes-pratiques-git)
+11. [Checklist pré-deployment](#checklist-pré-deployment)
+
+---
+
 ## Prérequis
 
 ### Système

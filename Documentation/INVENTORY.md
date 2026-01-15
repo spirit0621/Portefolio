@@ -1,5 +1,20 @@
 # 📋 Inventaire complet du projet
 
+## Table des matières
+
+1. [Résumé](#résumé)
+2. [Structure complète](#-structure-complète)
+3. [Statistiques du projet](#-statistiques-du-projet)
+4. [Contenu par page](#-contenu-par-page)
+5. [Technologie utilisée](#-technologie-utilisée)
+6. [Progression du projet](#-progression-du-projet)
+7. [Checklist complétude](#-checklist-complétude)
+8. [Statut final](#-statut-final)
+9. [Accès et contact](#-accès-et-contact)
+10. [Versioning](#-versioning)
+
+---
+
 ## Résumé
 
 **Portfolio professionnel multi-pages** créé entièrement en **HTML5, CSS3, et JavaScript vanilla** (sans dépendances externes).

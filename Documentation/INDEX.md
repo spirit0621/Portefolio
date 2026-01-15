@@ -1,5 +1,20 @@
 # 📚 Documentation - Portfolio Alves Fernandes
 
+## Table des matières
+
+1. [Documents](#-documents)
+2. [Quick Start](#-quick-start)
+3. [Technologies](#-technologies)
+4. [Stats du projet](#-stats-du-projet)
+5. [Structure du projet](#-structure-du-projet)
+6. [Points clés](#-points-clés)
+7. [Apprentissage recommandé](#-apprentissage-recommandé)
+8. [Troubleshooting](#-troubleshooting)
+9. [Support](#-support)
+10. [Checklist](#-checklist-avant-de-coder)
+
+---
+
 Bienvenue dans la documentation technique du portfolio ! Vous trouverez ici tous les détails sur l'architecture, le fonctionnement et le déploiement du projet.
 
 ## 📖 Documents
