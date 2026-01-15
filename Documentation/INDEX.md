@@ -4,7 +4,7 @@ Bienvenue dans la documentation technique du portfolio ! Vous trouverez ici tous
 
 ## 📖 Documents
 
-### 1. **README.md** - Guide technique complet
+### 1. **README.md** - Guide technique complet (15 KB)
 - Vue d'ensemble du projet
 - Architecture et structure
 - Langages et technologies utilisés
@@ -17,7 +17,7 @@ Bienvenue dans la documentation technique du portfolio ! Vous trouverez ici tous
 
 ---
 
-### 2. **ARCHITECTURE.md** - Détails architecture
+### 2. **ARCHITECTURE.md** - Détails architecture (16 KB)
 - Diagrammes d'architecture
 - Structure de fichiers détaillée
 - Flux de données
@@ -32,7 +32,7 @@ Bienvenue dans la documentation technique du portfolio ! Vous trouverez ici tous
 
 ---
 
-### 3. **INSTALLATION.md** - Installation et déploiement
+### 3. **INSTALLATION.md** - Installation et déploiement (9.2 KB)
 - Prérequis système
 - Installation locale étape par étape
 - Lancer un serveur local
@@ -43,6 +43,36 @@ Bienvenue dans la documentation technique du portfolio ! Vous trouverez ici tous
 - Bonnes pratiques Git
 
 👉 [Lire le guide installation](./INSTALLATION.md)
+
+---
+
+### 4. **INVENTORY.md** ⭐ NOUVEAU - Inventaire complet du projet (12 KB)
+- Résumé et statistiques globales
+- Structure complète fichiers/dossiers
+- Tableau détaillé des fichiers
+- Contenu détaillé par page
+- Stack technologique
+- Progression commits
+- Checklist de complétude
+- Statut final du projet
+- Accès et contact
+
+👉 [Lire l'inventaire complet](./INVENTORY.md)
+
+---
+
+### 5. **DEPENDENCIES.md** ⭐ NOUVEAU - Dépendances et packages (10 KB)
+- Résumé: **0 dépendances externes!** 🎉
+- Stack technologique (HTML5, CSS3, JS)
+- Détail des technologies utilisées
+- CSS propriétés et patterns
+- JavaScript vanille ES6+
+- Breakdown complet du code
+- Performance optimisations
+- Sécurité et scalabilité
+- Checklist dépendances
+
+👉 [Lire les dépendances](./DEPENDENCIES.md)
 
 ---
 
