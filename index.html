@@ -3,69 +3,130 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Portfolio</title>
+  <title>Alves Fernandes | Portfolio Professionnel</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Portfolio — P.Test</h1>
-      <p class="lead">Sélection de travaux et captures d'écran</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Alves Fernandes</div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Accueil</a></li>
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section id="about">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Créateur de Contenu & Producteur</h1>
+      <p class="hero-subtitle">Transformez vos idées en réalité avec des solutions créatives et professionnelles</p>
+      <a href="#portfolio" class="cta-button">Découvrir mon travail</a>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="about">
+    <div class="container">
       <h2>À propos</h2>
-      <p>Présentation courte. Ce portfolio reproduit visuellement les captures d'écran présentes dans le dossier <strong>Photo</strong>.</p>
-    </section>
+      <p>Je suis un créateur de contenu passionné avec une expertise en production vidéo, design graphique et création de contenu multimédia. Avec plusieurs années d'expérience, je fournis des solutions créatives et professionnelles pour vos projets.</p>
+    </div>
+  </section>
 
-    <section id="gallery">
-      <h2>Galerie</h2>
-      <div id="grid" class="grid"></div>
-    </section>
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Mon Portfolio</h2>
+      <p class="section-subtitle">Sélection de mes travaux et réalisations</p>
+      <div id="gallery" class="gallery-grid"></div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Pour échanger : <em>ajoutez vos coordonnées ici</em>.</p>
-    </section>
-  </main>
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Production Vidéo</h3>
+          <p>Réalisation et montage vidéo professionnel pour tous vos besoins de communication.</p>
+        </div>
+        <div class="service-card">
+          <h3>Design Graphique</h3>
+          <p>Création visuelle impactante pour renforcer votre identité de marque.</p>
+        </div>
+        <div class="service-card">
+          <h3>Création de Contenu</h3>
+          <p>Contenu original et engageant adapté à votre audience et vos objectifs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container">© Portfolio</div>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contactez-moi</h2>
+      <p>Vous avez un projet ? Je serais ravi de discuter avec vous.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit" class="cta-button">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Alves Fernandes. Tous droits réservés.</p>
+    </div>
   </footer>
 
   <script>
-    // Liste des fichiers présents dans /Photo (tels que trouvés dans le dépôt)
+    // Liste des fichiers Photo
     const photos = [
-      "Capture d’écran 2026-01-14 113034.png",
-      "Capture d’écran 2026-01-14 113058.png",
-      "Capture d’écran 2026-01-14 113121.png",
-      "Capture d’écran 2026-01-14 113158.png",
-      "Capture d’écran 2026-01-14 113217.png",
-      "Capture d’écran 2026-01-14 113231.png",
-      "Capture d’écran 2026-01-14 113254.png",
-      "Capture d’écran 2026-01-14 113313.png",
-      "Capture d’écran 2026-01-14 113327.png",
-      "Capture d’écran 2026-01-14 113346.png",
-      "Capture d’écran 2026-01-14 113406.png",
-      "Capture d’écran 2026-01-14 113418.png"
+      "Capture d'écran 2026-01-14 113034.png",
+      "Capture d'écran 2026-01-14 113058.png",
+      "Capture d'écran 2026-01-14 113121.png",
+      "Capture d'écran 2026-01-14 113158.png",
+      "Capture d'écran 2026-01-14 113217.png",
+      "Capture d'écran 2026-01-14 113231.png",
+      "Capture d'écran 2026-01-14 113254.png",
+      "Capture d'écran 2026-01-14 113313.png",
+      "Capture d'écran 2026-01-14 113327.png",
+      "Capture d'écran 2026-01-14 113346.png",
+      "Capture d'écran 2026-01-14 113406.png",
+      "Capture d'écran 2026-01-14 113418.png"
     ];
 
-    const grid = document.getElementById('grid');
+    const gallery = document.getElementById('gallery');
 
     photos.forEach(name => {
-      const card = document.createElement('figure');
-      card.className = 'card';
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
       const img = document.createElement('img');
       img.alt = name;
-      // encodeURI pour gérer espaces et caractères spéciaux
       img.src = encodeURI('Photo/' + name);
-      const caption = document.createElement('figcaption');
-      caption.textContent = name.replace(/^Capture d’écran /, '');
-      card.appendChild(img);
-      card.appendChild(caption);
-      grid.appendChild(card);
+      item.appendChild(img);
+      gallery.appendChild(item);
+    });
+
+    // Navigation active on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      navLinks.forEach(link => link.classList.remove('active'));
+      if (window.scrollY < 500) navLinks[0].classList.add('active');
+      else if (window.scrollY < 1200) navLinks[1].classList.add('active');
+      else if (window.scrollY < 2000) navLinks[2].classList.add('active');
+      else if (window.scrollY < 2800) navLinks[3].classList.add('active');
+      else navLinks[4].classList.add('active');
     });
   </script>
 </body>
