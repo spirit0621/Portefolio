@@ -3,16 +3,17 @@
 ## Table des matières
 
 1. [Diagramme d'architecture globale](#diagramme-darchitecture-globale)
-2. [Structure de fichiers détaillée](#structure-de-fichiers-détaillée)
-3. [Flux de données](#flux-de-données)
-4. [Composants réutilisables](#composants-réutilisables)
-5. [Variables CSS](#variables-css)
-6. [Responsive breakpoints](#responsive-breakpoints)
-7. [Système d'animation](#système-danimation)
-8. [Patterns JavaScript](#patterns-javascript)
-9. [Performance optimisations](#performance-optimisations)
-10. [Extensibilité](#extensibilité)
-11. [Versioning](#versioning-history)
+2. [Architecture Orientée Composants](#architecture-orientée-composants-css)
+3. [Structure de fichiers détaillée](#structure-de-fichiers-détaillée)
+4. [Flux de données](#flux-de-données)
+5. [Composants réutilisables](#composants-réutilisables)
+6. [Variables CSS](#variables-css)
+7. [Responsive breakpoints](#responsive-breakpoints)
+8. [Système d'animation](#système-danimation)
+9. [Patterns JavaScript](#patterns-javascript)
+10. [Performance optimisations](#performance-optimisations)
+11. [Extensibilité](#extensibilité)
+12. [Versioning](#versioning-history)
 
 ---
 
@@ -67,6 +68,166 @@
 │                                                           │
 └─────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## Architecture Orientée Composants (CSS)
+
+### Philosophie de conception
+
+Le CSS est organisé suivant une **architecture modulaire par composants** où chaque classe CSS représente un composant réutilisable et indépendant. Cette approche favorise:
+
+- **Maintenabilité**: Facile de localiser et modifier un composant
+- **Réutilisabilité**: Les composants peuvent être utilisés sur n'importe quelle page
+- **Scalabilité**: Ajouter de nouvelles pages ne complexifie pas le CSS
+- **Clarté**: Chaque composant a une responsabilité unique et bien définie
+
+### Hiérarchie des composants
+
+```
+┌─────────────────────────────────────────────────────────┐
+│          📦 FONDATIONS (Reset & Variables)              │
+│  Normalisation cross-browser, palette couleurs globale  │
+└─────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────┐
+│  🧩 COMPOSANTS PRIMAIRES (Réutilisables de base)       │
+│  Navigation, Hero, Buttons, Page-Hero, Sections        │
+└─────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────┐
+│  🎨 COMPOSANTS D'AFFICHAGE (Éléments visuels)          │
+│  Cards, Grids, Forms, Footer                          │
+└─────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────┐
+│  🔧 COMPOSANTS COMPOSÉS (Combinations)                 │
+│  Preview, About, Services, Contact, Timeline,         │
+│  Pricing, Projects, Monitoring, BTS, Gallery          │
+└─────────────────────────────────────────────────────────┘
+                           ↓
+┌─────────────────────────────────────────────────────────┐
+│  📱 RESPONSIVE DESIGN (Adaptations)                    │
+│  Media queries pour tablets (768px) et mobiles (480px) │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Catégories de composants
+
+#### 1. **Fondations Globales** (Ligne 45-73)
+- `:root` - Variables CSS pour la palette
+- `*` - Reset universel
+- `body` - Styles par défaut
+- `.container` - Wrapper principal
+
+#### 2. **Composants Primaires** (Ligne 76-237)
+Briques élémentaires réutilisables sur toutes les pages:
+
+| Composant | Classe | Utilisation |
+|-----------|--------|-------------|
+| Navigation | `.navbar`, `.nav-menu`, `.nav-link` | Barre supérieure sticky |
+| Hero | `.hero`, `.hero-title`, `.hero-subtitle` | Section d'accueil principale |
+| Bouton | `.cta-button` | Appels à l'action |
+| Page Hero | `.page-hero`, `.page-hero h1` | En-têtes des pages internes |
+| Section | `section`, `h2`, `h3` | Conteneurs de contenu |
+
+#### 3. **Composants d'Affichage** (Ligne 240-341)
+Éléments de présentation réutilisables:
+
+| Composant | Classes | Utilisation |
+|-----------|---------|-------------|
+| Carte | `.service-card`, `.service-card h3` | Boîtes de contenu avec hover |
+| Grille | `.gallery-grid`, `.gallery-item` | Mise en page multi-colonnes |
+| Formulaire | `.contact-form`, `.form-group`, `.form-group input` | Saisie de données |
+| Pied de page | `.footer` | Footer du site |
+
+#### 4. **Composants Composés** (Ligne 344-1030)
+Combinaisons de composants primaires pour des sections complètes:
+
+| Composant | Classes | Responsabilité |
+|-----------|---------|---|
+| **Preview** | `.preview`, `.preview-links` | Section d'aperçu avec liens |
+| **About** | `.about`, `.about p` | Section à propos |
+| **Services** | `.services`, `.services-grid` | Grille de services |
+| **Contact** | `.contact`, `.contact h2` | Formulaire de contact |
+| **Timeline** | `.timeline`, `.timeline-item`, `.date` | Chronologie d'événements |
+| **Pricing** | `.pricing-grid`, `.pricing-card`, `.price` | Grille tarifaire |
+| **Projects** | `.projects-grid`, `.project-card`, `.project-image` | Galerie de projets |
+| **Monitoring** | `.monitoring-grid`, `.monitoring-card` | Suivi technologique |
+| **BTS** | `.bts-grid`, `.bts-card`, `.intro-card` | Section formation BTS |
+| **About Page** | `.about-grid`, `.skills-list` | Page à propos complète |
+| **Presentation** | `.presentation-grid`, `.sidebar-card` | Page présentation |
+| **Services Page** | `.services-grid-large`, `.service-card-large` | Page services détaillée |
+| **Contact Page** | `.contact-section`, `.contact-grid` | Page contact |
+| **Gallery** | `.portfolio-section`, `.filter-buttons` | Galerie portfolio |
+
+#### 5. **Responsive Design** (Ligne 1033+)
+
+**Breakpoint Tablette** (≤768px):
+- Réduction des espacements et polices
+- Conversion des grilles 2 colonnes → 1 colonne
+- Ajustement des layouts complexes
+
+**Breakpoint Mobile** (≤480px):
+- Polices réduites pour l'écran étroit
+- Grilles passent à 1 colonne
+- Formulaires adaptés
+
+### Exemple de composition
+
+Prenons la page "Services" comme exemple de composition:
+
+```
+Services Page (composant composé)
+├── Page Hero Component (section d'intro)
+│   ├── Gradient background
+│   ├── Hero title
+│   └── Hero subtitle
+│
+├── Services Section Component
+│   └── Services Grid Component
+│       └── Multiple Service Card Component
+│           ├── Card background
+│           ├── Card title (h3)
+│           └── Card description
+│
+└── CTA Section Component (appel à l'action)
+    ├── Gradient background
+    ├── CTA title
+    └── CTA Button Component
+```
+
+### Avantages de cette structure
+
+**Avant** (Organisation par pages):
+```css
+/* Portfolio Page */
+.portfolio-section { ... }
+.filter-buttons { ... }
+
+/* About Page */
+.about-section { ... }
+.about-grid { ... }
+
+/* Services Page */
+.services-section { ... }
+```
+
+**Après** (Architecture par composants):
+```css
+📦 FONDATIONS
+🧩 COMPOSANTS PRIMAIRES → Réutilisables partout
+🎨 COMPOSANTS D'AFFICHAGE → Base pour les composites
+🔧 COMPOSANTS COMPOSÉS → Pages complètes
+📱 RESPONSIVE → Adaptation globale
+```
+
+**Bénéfices**:
+- ✅ Moins de duplication CSS
+- ✅ Plus facile d'ajouter des pages
+- ✅ Modification localisée d'un composant
+- ✅ Documentation claire des responsabilités
+- ✅ Réutilisation entre pages
 
 ---
 
