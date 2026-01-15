@@ -1,0 +1,130 @@
+VEILLE TECHNOLOGIQUE
+=====================
+
+DÉFINITION
+----------
+
+La veille technologique est un élément de la veille stratégique qui consiste à surveiller les évolutions techniques et les innovations dans un secteur d'activité donné.
+
+Elle comprend:
+• Surveillance des évolutions techniques
+• Collecte d'informations
+• Partage et diffusion d'informations
+• Anticipation des changements
+• Évaluation de l'impact organisationnel
+
+Domaines couverts:
+• Recherche et développement
+• Brevets
+• Lancement de nouveaux produits
+• Nouveaux matériaux
+• Nouveaux processus
+• Concepts innovants
+• Innovation de fabrication
+
+
+MES DOMAINES DE VEILLE
+----------------------
+
+1. INTELLIGENCE ARTIFICIELLE DANS LA GESTION DE DONNÉES
+   
+   Définition:
+   L'intelligence artificielle (IA) est un ensemble de théories et de techniques visant 
+   à réaliser des machines capables de simuler l'intelligence humaine.
+   
+   Applications:
+   • Gestion efficace de données massives
+   • Analyse de données volumineuses
+   • Découverte d'informations à valeur ajoutée
+   • Prise de décision raisonnée dans divers domaines
+   
+   Impact personnel:
+   Mon stage m'a permis d'apprendre comment sont créées les bots 
+   (IA créée pour une fonction précise)
+
+2. DÉVELOPPEMENT D'APPLICATIONS D'ANALYSE DE DONNÉES
+   
+   Objectif:
+   Créer des applications capables de:
+   • Analyser différentes données
+   • Résumer les informations clés
+   • Informer le client des résultats
+   
+   Cas d'usage:
+   • Business Intelligence
+   • Rapports automatisés
+   • Dashboards de données
+   • Recommandations intelligentes
+
+
+CONCEPTS CONNEXES À L'IA
+------------------------
+
+MACHINE LEARNING
+- Repérage des données ou motifs récurrents dans un ensemble d'informations
+- Sous différentes formes et structures
+- Objectifs:
+  • Réaliser des prévisions
+  • Effectuer une ou plusieurs tâches précises
+- Applications: Recommandations, classification, prédiction
+
+DEEP LEARNING
+- Processus d'autoapprentissage avancé
+- Nécessite une quantité d'informations importante
+- Utilisé pour:
+  • Reconnaissance d'images
+  • Traitement du langage naturel
+  • Prédictions complexes
+
+ROBOTIQUE INTELLIGENTE (RPA)
+- Création de bots pour automatiser les tâches
+- Obtention d'un gain de temps significatif
+- Optimisation du traitement des informations
+- Permet au professionnel de se concentrer sur:
+  • L'analyse à valeur ajoutée
+  • La diffusion des résultats
+  • Les décisions stratégiques
+
+IMPACT EN VEILLE STRATÉGIQUE
+- L'IA est synonyme de gain de temps
+- Optimisation du traitement des informations
+- Meilleure diffusion des résultats
+- Focus sur la valeur ajoutée
+
+
+SOURCES D'INFORMATION
+---------------------
+
+Développement et tutoriels:
+• Developpez.com - Forums et ressources
+  https://www.developpez.net/forums/
+  
+• Human Coders News - Actualités JavaScript
+  https://humancodersnews.com
+  
+• Eclipse.org - IDE et développement Java
+
+Linux et systèmes:
+• linuxtricks.fr - Astuces et actualités Linux
+  
+• It-connect.fr - Tutoriels et cours informatique
+  https://www.it-connect.fr
+  
+Informatique générale:
+• Lemondeinformatique.fr - Dossiers et actualités
+  https://www.lemondeinformatique.fr
+  
+• Journal du Hacker - Actualités technologiques
+  https://www.journalduhacker.net
+  
+Intelligence Artificielle:
+• NetApp - IA et technologies cloud
+  https://www.netapp.com/
+  Ressource: "Qu'est-ce que l'intelligence artificielle (IA) 
+  et pourquoi est-elle importante"
+
+Blogs et communautés:
+• Tech communities
+• Forums spécialisés
+• Webinaires et conférences
+• Publications scientifiques
