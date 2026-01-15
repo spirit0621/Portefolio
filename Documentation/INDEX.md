@@ -146,30 +146,38 @@ git push origin main
 
 ```
 Portefolio/
-├── 📄 Pages HTML (8 fichiers)
-│   ├── index.html
-│   ├── presentation.html
-│   ├── projects.html
-│   ├── portfolio.html
-│   ├── monitoring.html
-│   ├── bts-sio.html
-│   ├── services.html
-│   └── contact.html
+├── 📄 index.html (redirection)
+├── 📄 README.md
+├── 📄 DOCUMENTATION_COMPLETE.txt
 │
-├── 🎨 Styles
-│   └── styles.css (15 KB)
+├── 📁 pages/ (8 pages HTML)
+│   ├── index.html (Accueil)
+│   ├── presentation.html (Présentation)
+│   ├── projects.html (Projets)
+│   ├── portfolio.html (Galerie)
+│   ├── monitoring.html (Veille Tech)
+│   ├── bts-sio.html (Formation)
+│   ├── services.html (Services)
+│   └── contact.html (Contact)
 │
-├── 🔧 Scripts
-│   ├── nav.js (navigation active)
-│   └── viewer.html (visualiseur images)
+├── 🎨 styles/ (Feuille CSS)
+│   └── styles.css (15 KB - responsive)
 │
-├── 🖼️  Assets
-│   └── Photo/ (12 images)
+├── 🔧 scripts/ (Interactivité)
+│   ├── nav.js (Navigation active)
+│   └── viewer.html (Visualiseur images)
 │
-└── 📚 Documentation
-    ├── README.md (ce fichier)
-    ├── ARCHITECTURE.md
-    └── INSTALLATION.md
+├── 🖼️  assets/ (Assets média)
+│   └── Photo/ (12 images PNG)
+│
+└── 📚 Documentation/ (7 guides)
+    ├── INDEX.md (Point d'entrée)
+    ├── README.md (Guide technique)
+    ├── ARCHITECTURE.md (Détails archi)
+    ├── INSTALLATION.md (Setup)
+    ├── INVENTORY.md (Inventaire)
+    ├── DEPENDENCIES.md (Stack tech)
+    └── README-FR.md (Synthèse)
 ```
 
 ---
