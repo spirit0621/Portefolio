@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio | Alves Fernandes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Alves Fernandes</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="about.html" class="nav-link">À propos</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Mon Portfolio</h1>
+      <p>Sélection de mes travaux et réalisations</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="video">Vidéo</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="photo">Photo</button>
+      </div>
+
+      <div id="gallery" class="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Alves Fernandes. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    // Liste des fichiers Photo
+    const photos = [
+      "Capture d'écran 2026-01-14 113034.png",
+      "Capture d'écran 2026-01-14 113058.png",
+      "Capture d'écran 2026-01-14 113121.png",
+      "Capture d'écran 2026-01-14 113158.png",
+      "Capture d'écran 2026-01-14 113217.png",
+      "Capture d'écran 2026-01-14 113231.png",
+      "Capture d'écran 2026-01-14 113254.png",
+      "Capture d'écran 2026-01-14 113313.png",
+      "Capture d'écran 2026-01-14 113327.png",
+      "Capture d'écran 2026-01-14 113346.png",
+      "Capture d'écran 2026-01-14 113406.png",
+      "Capture d'écran 2026-01-14 113418.png"
+    ];
+
+    const gallery = document.getElementById('gallery');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    // Afficher la galerie
+    function renderGallery() {
+      gallery.innerHTML = '';
+      photos.forEach(name => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        const img = document.createElement('img');
+        img.alt = name;
+        img.src = encodeURI('Photo/' + name);
+        item.appendChild(img);
+        gallery.appendChild(item);
+      });
+    }
+
+    // Gestion des filtres
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // Pour l'instant, afficher tous les éléments
+        renderGallery();
+      });
+    });
+
+    renderGallery();
+  </script>
+</body>
+</html>
