@@ -2288,6 +2288,14 @@ h3 {
 }
 }
 
+/* Two Columns Section */
+.two-columns-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Timeline Section */
 .timeline-section {
   background: white;
@@ -2323,9 +2331,9 @@ h3 {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-left: 60px;
-  padding: 1.2rem;
+  padding: 1rem;
   background: #f8f9fa;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -2489,7 +2497,7 @@ h3 {
 .exp-timeline-item {
   position: relative;
   padding-left: 60px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .exp-timeline-marker {
@@ -2693,6 +2701,11 @@ h3 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .two-columns-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .skills-container {
     grid-template-columns: 1fr;
   }
@@ -2712,6 +2725,10 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .two-columns-section {
+    grid-template-columns: 1fr;
+  }
+
   .profile-section,
   .timeline-section,
   .certifications-section,
