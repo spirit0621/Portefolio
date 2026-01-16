@@ -284,42 +284,25 @@ SOURCES D'INFORMATION SPÉCIALISÉES
    • ArXiv.org - Papers scientifiques (arxiv.org/list/cs.AI)
    • Papers with Code - Recherche + code (paperswithcode.com)
    • Towards Data Science - Medium (towardsdatascience.com)
-   • AI News Aggregators
 
 🎓 Apprentissage & Certification:
    • Coursera - Machine Learning specializations
    • Fast.ai - Practical Deep Learning
    • DeepLearning.AI - Andrew Ng courses
-   • Kaggle Learn - Tutorials pratiques
-   • Stanford CS224N (NLP), CS231N (Vision)
-
-🔬 Recherche & Labos:
-   • OpenAI Research
-   • Google Research Brain
-   • Meta AI Research
-   • DeepMind Publications
-   • NeurIPS, ICML, ICLR conferences
 
 💻 Communautés:
    • Kaggle - Compétitions & datasets
    • GitHub - Repos et notebooks
-   • Stack Overflow - Q&A technique
-   • Reddit : r/MachineLearning, r/LanguageModels, r/datascience
-   • Discord/Slack communities
+   • Reddit : r/MachineLearning, r/datascience
 
 📰 Newsletters:
    • Import AI (Jack Clark)
    • The Batch (Deeplearning.AI)
-   • Data Elixir
-   • Hugging Face Weekly
-   • Papers with Code Newsletter
 
 🛠️ Documentation:
-   • TensorFlow/PyTorch official docs
-   • Scikit-learn documentation
+   • TensorFlow & PyTorch official docs
    • Hugging Face Model Hub
    • OpenAI API documentation
-   • AWS/GCP/Azure ML documentation
 
 
 
