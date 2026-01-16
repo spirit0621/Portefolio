@@ -2150,12 +2150,13 @@ h3 {
 
 /* Presentation Page Styles */
 .profile-section {
-  background: white;
-  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ecf0f1 0%, #f8f9fa 100%);
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   line-height: 1.8;
+  border-left: 5px solid #3498db;
 }
 
 .profile-section h2 {
@@ -2202,46 +2203,50 @@ h3 {
 /* Timeline Section */
 .timeline-section {
   background: white;
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .timeline-section h2 {
-  color: var(--primary);
+  color: #2c3e50;
   margin-bottom: 2rem;
   font-size: 2rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 1rem;
+  display: inline-block;
 }
 
 .timeline {
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 12px;
   top: 0;
   bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, #3498db, #2ecc71);
+  width: 2px;
+  background: linear-gradient(to bottom, #3498db, #2980b9);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2.5rem;
-  margin-left: 100px;
-  padding: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: 60px;
+  padding: 1.2rem;
   background: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
+  border-left: 3px solid #3498db;
 }
 
 .timeline-item:hover {
   background: #ecf0f1;
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 .timeline-item::before {
@@ -2278,11 +2283,12 @@ h3 {
 
 /* Certifications Section */
 .certifications-section {
-  background: white;
-  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #e8f8f5 0%, #ecf0f1 100%);
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-top: 4px solid #2ecc71;
 }
 
 .certifications-section h2 {
@@ -2294,21 +2300,22 @@ h3 {
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .cert-card {
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
-  padding: 2rem;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.15) 0%, rgba(52, 152, 219, 0.15) 100%);
+  padding: 1.5rem;
   border-radius: 10px;
   text-align: center;
-  border: 2px solid transparent;
+  border: 2px solid #2ecc71;
   transition: all 0.3s ease;
 }
 
 .cert-card:hover {
-  border-color: #3498db;
+  border-color: #27ae60;
   transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.25) 0%, rgba(52, 152, 219, 0.25) 100%);
 }
 
 .cert-image {
@@ -2350,73 +2357,113 @@ h3 {
 /* Experience Section */
 .experience-section {
   background: white;
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .experience-section h2 {
-  color: var(--primary);
+  color: #2c3e50;
   margin-bottom: 2rem;
   font-size: 2rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 1rem;
+  display: inline-block;
 }
 
-.experience-container {
-  display: grid;
-  gap: 1.5rem;
+/* Experience Timeline */
+.exp-timeline {
+  position: relative;
+  padding: 1rem 0;
 }
 
-.exp-item {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-left: 4px solid #3498db;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
 }
 
-.exp-item:hover {
-  background: #ecf0f1;
-  transform: translateX(5px);
+.exp-timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 2rem;
 }
 
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  gap: 1rem;
+.exp-timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 26px;
+  height: 26px;
+  background: #3498db;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #3498db;
 }
 
-.exp-header h4 {
-  color: #2c3e50;
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.exp-date {
+.exp-type-badge {
+  position: absolute;
+  top: 30px;
+  left: -55px;
   background: #3498db;
   color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 600;
   white-space: nowrap;
-  font-weight: 500;
 }
 
-.exp-details p {
+.exp-timeline-content {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border-left: 3px solid #3498db;
+}
+
+.exp-year {
+  color: #3498db;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.exp-timeline-content h4 {
+  color: #2c3e50;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.exp-position {
   color: #555;
-  margin: 0.3rem 0;
   font-size: 0.95rem;
+  margin: 0.3rem 0;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.exp-location {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin: 0.3rem 0;
 }
 
 /* Skills Section */
 .skills-section {
-  background: white;
-  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f4ecf7 0%, #ecf0f1 100%);
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-top: 4px solid #9b59b6;
 }
 
 .skills-section h2 {
@@ -2428,13 +2475,14 @@ h3 {
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .skills-category h3 {
   color: #3498db;
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-bottom: 3px solid #3498db;
   padding-bottom: 0.5rem;
 }
@@ -2454,18 +2502,6 @@ h3 {
   gap: 1rem;
 }
 
-.skill-logo {
-  flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-}
-
 .skill-logo img {
   max-width: 90%;
   max-height: 90%;
@@ -2473,7 +2509,7 @@ h3 {
 }
 
 .skill-item:hover {
-  background: #ecf0f1;
+  background: linear-gradient(135deg, #e8f5e9 0%, #e8f4f8 100%);
   transform: translateX(5px);
 }
 
