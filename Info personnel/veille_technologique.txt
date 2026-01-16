@@ -280,29 +280,18 @@ APPLICATIONS CONCRÈTES CIBLÉES
 SOURCES D'INFORMATION SPÉCIALISÉES
 ----------------------------------
 
-📚 Actualités IA/Data:
-   • ArXiv.org - Papers scientifiques (arxiv.org/list/cs.AI)
-   • Papers with Code - Recherche + code (paperswithcode.com)
-   • Towards Data Science - Medium (towardsdatascience.com)
+🇫🇷 Actualités & Tutoriels Français:
+   • Developpez.com - Forums communautaires (https://www.developpez.net/forums/)
+   • LinuxTricks.fr - News Linux & Tech (https://linuxtricks.fr)
+   • IT-Connect - Tutoriels informatique (https://it-connect.fr)
 
-🎓 Apprentissage & Certification:
-   • Coursera - Machine Learning specializations
-   • Fast.ai - Practical Deep Learning
-   • DeepLearning.AI - Andrew Ng courses
+📰 Médias Informatiques Français:
+   • Monde Informatique - Dossiers & analyses (https://lemondeinformatique.fr)
+   • Journal du Hacker - Infos récentes (https://www.journalduhacker.net)
+   • Human Coders News - Veille tech (https://news.humancoders.com)
 
-💻 Communautés:
-   • Kaggle - Compétitions & datasets
-   • GitHub - Repos et notebooks
-   • Reddit : r/MachineLearning, r/datascience
-
-📰 Newsletters:
-   • Import AI (Jack Clark)
-   • The Batch (Deeplearning.AI)
-
-🛠️ Documentation:
-   • TensorFlow & PyTorch official docs
-   • Hugging Face Model Hub
-   • OpenAI API documentation
+🤖 Intelligence Artificielle:
+   • NetApp - IA & Cloud solutions (https://www.netapp.com/fr/artificial-intelligence/)
 
 
 
