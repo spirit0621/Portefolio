@@ -10,22 +10,22 @@ ARCHITECTURE COMPOSANTS
 ═════════════════════════════════════════════════════════════════════════════
 
 📦 FONDATIONS (GLOBAL)
-  └─ Variables & Couleurs (ligne 45)
-  └─ Reset & Styles de Base (ligne 56)
-  └─ Conteneur Global (ligne 68)
+  └─ Variables & Couleurs (ligne 45) Définition de la charte graphique (couleurs, polices) pour assurer l'uniformité visuelle demandée.
+  └─ Reset & Styles de Base (ligne 56) Standardisation des éléments HTML pour garantir un rendu identique sur tous les navigateurs.
+  └─ Conteneur Global (ligne 68) Gestion des alignements et des largeurs maximales pour une mise en page cohérente.
 
 🧩 COMPOSANTS PRIMAIRES (RÉUTILISABLES)
-  └─ Navigation Component (ligne 76)
-  └─ Hero Component (ligne 124)
-  └─ Button Component (ligne 155)
-  └─ PageHero Component (ligne 185)
-  └─ Section Component (ligne 205)
+  └─ Navigation Component (ligne 76) Menu fluide permettant de naviguer entre l'espace RH, salarié et l'administration.
+  └─ Hero Component (ligne 124) Sections d'accueil impactantes présentant ton profil de concepteur développeur.
+  └─ Button Component (ligne 155) Standardisation des appels à l'action et des blocs de contenu pour une interface intuitive.
+  └─ PageHero Component (ligne 185) Sections d'accueil impactantes présentant ton profil de concepteur développeur.
+  └─ Section Component (ligne 205) Standardisation des appels à l'action et des blocs de contenu pour une interface intuitive.
 
 🎨 COMPOSANTS D'AFFICHAGE (PRESENTATIONAL)
-  └─ Card Component (ligne 237)
-  └─ Grid Component (ligne 255)
-  └─ Form Component (ligne 287)
-  └─ Footer Component (ligne 330)
+  └─ Card Component (ligne 237) Utilisation de cartes pour l'affichage synthétique des employés dans la liste RH.
+  └─ Grid Component (ligne 255) Système de grille flexible pour organiser les tableaux de bord et les vues d'ensemble.
+  └─ Form Component (ligne 287) Interfaces de saisie pour les variables de paie et les informations salariés (F05, F08).
+  └─ Footer Component (ligne 330) Pied de page incluant les mentions légales et la conformité RGPD.
 
 🔧 COMPOSANTS COMPOSÉS (COMPOSITE)
   └─ Preview Component (ligne 341)
@@ -40,8 +40,8 @@ ARCHITECTURE COMPOSANTS
   └─ Gallery Component (ligne 760)
 
 📱 RESPONSIVE (MOBILE-FIRST)
-  └─ Breakpoint Tablet (768px)
-  └─ Breakpoint Mobile (480px)
+  └─ Breakpoint Tablet (768px) Ajustement des grilles pour une lecture confortable sur tablettes.
+  └─ Breakpoint Mobile (480px) Optimisation du menu et des formulaires pour un usage sur smartphone.
 
 ═════════════════════════════════════════════════════════════════════════════
 */
@@ -154,7 +154,7 @@ body {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 950px;
 }
 
 .hero-title {
@@ -216,7 +216,7 @@ body {
    Style de base pour toutes les sections du site
    Assure un espacement cohérent entre les sections */
 section {
-  padding: 80px 0;                      /* Espacement vertical généreux */
+  padding: 10px 0;                      /* Espacement vertical généreux */
   border-bottom: 1px solid var(--border);  /* Ligne de séparation */
 }
 
@@ -332,6 +332,7 @@ h3 {
 
 .form-group {
   margin-bottom: 1.5rem;
+  
 }
 
 .form-group label {
@@ -404,11 +405,50 @@ h3 {
   color: var(--accent);
 }
 
+/* 🔧 COMPOSANTS COMPOSÉS - Preview Component */
+.preview-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    padding-right: 200px;
+}
+
+.preview-content {
+    margin-left: 30px;        /* Espace entre l'image et le texte */
+    text-align: center;    /* Centre le texte */
+    max-width: 800px;         /* Limite la largeur du texte pour une meilleure lisibilité */
+}
+
+.preview-content h2 {
+    margin-top: 0;           /* Aligne le haut du titre avec le haut de l'image */
+    margin-bottom: 15px;
+}
+
+.preview-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    max-width: 800px;         /* ÉLARGISSEMENT : Le texte prend toute la largeur disponible */
+    width: 100%;             /* Force l'étalement */
+    text-align: justify;     /* Optionnel : pour un rendu très propre sur les bords */
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;          /* L'image ne bouge pas, peu importe la taille du texte */
+}
+
+
+
 /* ABOUT COMPONENT - Section à propos
    Section de présentation personnelle/professionnelle
    Fond clair pour différencier du reste du site */
 .about {
   background: var(--light);           /* Fond clair */
+  
 }
 
 .about p {
@@ -2682,12 +2722,54 @@ h3 {
   flex: 1;
 }
 
+/* Styles pour la grille de logiciels */
+.skill-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.software-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+  height: 100%;
+}
+
+.software-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  border-color: var(--secondary);
+}
+
+.software-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Advanced Skills */
 .advanced-skills {
   margin-top: 3rem;
   background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
   padding: 2rem;
-  border-radius: 10px;
   border-top: 4px solid #3498db;
 }
 
